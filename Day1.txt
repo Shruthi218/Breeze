@@ -1,27 +1,17 @@
 Linked List
 
-Node:
-Data
 
-Next
-
-
-L:
-
-N1               N2                   N3
-10|1000       20|2000          30|3000    ---- NULL
-                     (1000)             (2000)        3000
 
 Runtime complexity:    Best case                   Average                          Worst
 
-Insertion at head:         O(1)                              O(1)                              O(1)
-Insertion at tail:            O(1)                               O(1)                             O(n) -> no tail pointer 
-Insertion in middle:      O(n)                                O(n)                             O(n)
-Deletion at head:         O(1)                                 O(1)                            O(1)
-Deletion at tail:            O(1)                               O(1)                              O(n)
-Deletion at middle:      O(n)                               O(n)                             O(n)
+Insertion at head:        O(1)                              O(1)                       O(1)
+Insertion at tail:        O(1)                              O(1)                       O(n) -> no tail pointer 
+Insertion in middle:      O(n)                              O(n)                        O(n)
+Deletion at head:         O(1)                              O(1)                        O(1)
+Deletion at tail:         O(1)                              O(1)                        O(n)
+Deletion at middle:       O(n)                              O(n)                        O(n)
 
-Searching for              O(1)                              O(n)                               O(n)
+Searching for              O(1)                              O(n)                        O(n)
 Given target
 
 
