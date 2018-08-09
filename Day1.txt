@@ -1,0 +1,155 @@
+Linked List
+
+Node:
+Data
+
+Next
+
+
+L:
+
+N1               N2                   N3
+10|1000       20|2000          30|3000    ---- NULL
+                     (1000)             (2000)        3000
+
+Runtime complexity:    Best case                   Average                          Worst
+
+Insertion at head:         O(1)                              O(1)                              O(1)
+Insertion at tail:            O(1)                               O(1)                             O(n) -> no tail pointer 
+Insertion in middle:      O(n)                                O(n)                             O(n)
+Deletion at head:         O(1)                                 O(1)                            O(1)
+Deletion at tail:            O(1)                               O(1)                              O(n)
+Deletion at middle:      O(n)                               O(n)                             O(n)
+
+Searching for              O(1)                              O(n)                               O(n)
+Given target
+
+
+Arrays:
+
+{1,2,3,4,5,6} 
+     
+Insertion:
+   -- at beginning          O(n) ---- same for all
+  -- in a given index     O(n)
+  -- in the end                O(1) --- assume reallocating is amortized constant
+Deletion:    
+-- at beginning          O(n) ---- same for all
+  -- in a given index     O(n)
+  -- in the end                O(1) --- assume reallocating is amortized constant
+ Search:
+    Beginning: O(1), middle: O(n),  end: O(1)
+Search if index is given:   ---> O(1)
+Update:
+Update operation refers to updating an existing element from the array at a given index.
+O(1)
+    
+      Arrays
+   LinkedList
+  Random access
+ Sequential access
+Contiguous memory
+Random memory allocation (from heap)
+Static Memory allocation (compile time)
+dynamic memory allocation (runtime)
+Size needs to be known before
+Size does not need to be known before
+1d, 2d or nd
+Singly, doubly, circular
+   
+
+
+LL basic implementation:
+
+LinkedList {
+	Int val;
+	LinkedList next;
+}
+
+LinkedList insertAtHead (LinkedList head, int key) {
+
+LinkedList node = new LinkedList();
+node.val = key;
+node.next = null;
+
+if(head==null) {
+	head = node;
+} 
+
+	else  {
+ 	node.next = head;
+ 	head = node;
+             
+	}
+
+return head;
+}
+
+
+
+1->2->3     4
+
+
+LinkedList insertAtTail (LinkedList tail, int key) {
+	LinkedList node = new LinkedList();
+	node.val = key;
+	node.next = null;
+	if(head==null) {
+	head = tail = node;
+	}
+	else {
+	tail.next = node;
+            tail = node;
+
+}
+return head;
+}
+
+1->2->3->4->6     , index = 3, key = 5
+o/p: 1->2->3->5->4->6
+
+
+LL === 1->NULL, index  = 0, key = 2
+o/p: 1->2
+
+LinkedList insertAtIndex (LinkedList head, int index, int key) {
+LinkedList node = new LinkedList()
+Node.val = key;
+node.next = null;
+
+
+
+
+LinkedList deleteAtHead (LinkedList head) {
+
+	if(head==null) {
+		return null;
+}
+else {
+	head = head.next;
+ }
+return head;
+}
+
+1->2->3->4   deleteAtTail -- 1->2->3
+LinkedList deleteAtTail (LinkedList tail) {
+	
+Linkedlist cur = head;
+
+while(cur.next!=tail) {
+	cur = cur.next;
+}
+
+tail = cur;
+cur.next = null;
+return head;
+}
+
+
+
+
+
+
+
+
+
