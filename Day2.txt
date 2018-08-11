@@ -1,0 +1,5 @@
+Notes :
+Topic : Linked List
+
+1. Dummy node concept used while modifying the input linked list. (Use this idea to make the logic easy for you)
+2. Merge two sorted linked list (No need to write a seperate condition to check when two values of nodes are equal)
