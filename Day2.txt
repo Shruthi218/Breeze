@@ -3,3 +3,32 @@ Topic : Linked List
 
 1. Dummy node concept used while modifying the input linked list. (Use this idea to make the logic easy for you)
 2. Merge two sorted linked list (No need to write a seperate condition to check when two values of nodes are equal)
+3. Reverse Linked List 
+
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        
+        if(head==null || head.next==null) {
+            return head;
+        }
+        
+        ListNode prev = null;
+        ListNode cur = head;
+        ListNode front = cur.next;
+        
+        while(true) {
+            
+            cur.next = prev;
+            // We have to make sure to establish a link first
+            if(front==null)
+                break;
+            prev = cur;
+            cur = front;
+            front = front.next;
+            }
+            
+        
+        return cur;
+    }
+}
+
