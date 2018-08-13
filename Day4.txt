@@ -1,0 +1,13 @@
+Things learnt :
+
+Partition Linked List :
+
+Input: head = 1->4->3->2->5->2, x = 3
+Output: 1->2->2->4->3->5
+
+
+Step 1 :  Compare target value to every node value while traversing. i.e cur.val > target and so on..
+Step 2 : If cur node value is less than target, then we are good, move the pointer one step forward.
+Step 3 : Else break the link and copy the node value to a new list.
+Step 4 : Continue the above steps till the end.
+
