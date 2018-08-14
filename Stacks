@@ -1,0 +1,57 @@
+Stack Implementation Using LinkedList :
+
+Class Stack {
+	Int top = -1;
+	Int size = 0;
+	Int capacity = 100; // size should be always less than capacity
+  Private:
+		Bool isEmpty();
+
+	Class LinkedList {
+		Int val;
+		LinkedList next = NULL;
+	}
+	Public:
+		Void Push(int key) {
+			if(size >= capacity) {
+				System.out.println(“Stack overflow”);
+			}
+  			//Linkedlist node creation
+			LinkedList n = new LinkedList();
+			n.val = key;
+			if(head==null){
+
+				head = n;
+      }
+			else {
+				n.next = head;
+				head = n;
+      }
+		size++;
+
+		}
+		
+		Int peek() {
+			return head.val;
+		}
+
+		Void pop() {
+			if(head==null) {
+			System.out.println(“Stack underflow”);
+			return;
+     }
+			else {
+				head = head.next;
+				
+			}
+			size--;
+
+			
+		}
+
+		Bool isempty() {
+			return (size == 0) ? true : false ; 
+		}
+
+	Remember : We are simulating stack so size factor is important here.
+	
