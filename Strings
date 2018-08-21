@@ -1,0 +1,18 @@
+trim() ----> Removed trailing and leading whitespaces
+split(" ") ----> Does splitting using the delimiter space.
+split("\\s+")
+
+Example :
+
+import java.util.*;
+public class HelloWorld{
+
+    public static void main(String[] argv) throws Throwable {
+        String s = "Hi how are you           doing       man";
+        String[] splitted = s.split("\\s+"); 
+        // split("\\s+") splits based on the whitespace pattern, irrespective of the number of whitespaces it splits.
+        for(int i=0;i<splitted.length;i++) {
+            System.out.println(splitted[i]);
+        }
+    }
+}
